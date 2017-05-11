@@ -4,8 +4,8 @@ LABEL author="Tomasz Malinowski <t.malinowski@oberthur.com>"
 LABEL version="docker-centos_i386-gcc"
 
 RUN yum -y update \
-	&& yum -y install gcc vim mc git epel-release \
+	&& yum -y install yum-plugin-ovl gcc vim mc git epel-release \
 
 # clean up
 	&& rm -rf /var/cache/yum/* \
-	&& yum clean all \
+	&& yum clean all
